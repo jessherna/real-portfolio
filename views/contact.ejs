@@ -1,0 +1,44 @@
+
+<!-- Include the header partial -->
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+<script src="/javascripts/script.js"></script>
+<main>
+    <div class="contact-information">
+        
+        <button class="contact-button" onclick="toggleContactInfo()">Show Jessica's Contact Info</button>
+
+        <div class="contact-info-section"><br>
+            <p class="contact-info"><strong>Name:</strong> Jessica Marie Hernandez</p>
+            <p class="contact-info"><strong>Contact Number:</strong> +6472424788</p>
+            <p class="contact-info"><strong>Email Address:</strong> jherna80@my.centennialcollege.ca</p>
+            <p class="contact-info"><strong>Location:</strong> Toronto, Canada</p>
+        </div>
+    </div>
+
+    
+    <br>
+    <div class="contact-container">
+        <h1>Let me know what you think</h1>
+        <form id="contact-form" action="process_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="tel">Contact Number:</label>
+            <input type="tel" id="tel" name="tel" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+
+</main>
+
+<!-- Include the footer partial -->
+<%- include('partials/footer') %>
